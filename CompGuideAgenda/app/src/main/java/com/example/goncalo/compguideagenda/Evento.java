@@ -26,7 +26,7 @@ public class Evento {
     }
 
     public String toString(){
-        String st = "########## inicio "+inicio+" fim"+fim+" descricao"+descricao;
+        String st = "########## inicio "+inicio+" fim "+fim+" descricao "+descricao;
         return st;
     }
 }

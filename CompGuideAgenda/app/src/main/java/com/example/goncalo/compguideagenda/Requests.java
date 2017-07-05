@@ -59,7 +59,11 @@ public class Requests {
             System.out.println("Post parameters : " + urlParameters);
             System.out.println("Response Code : " + responseCode);
 
-            if (responseCode == 200) res=true;
+            if (responseCode == 200){
+                res=true;
+            }else {
+                res=false;
+            }
 
 
             return res;
@@ -138,9 +142,9 @@ public class Requests {
                         if (tagname.equalsIgnoreCase("event")) {
                             eventos.add(evento);
                         } else if (tagname.equalsIgnoreCase("endDate")) {
-                            evento.fim = text.substring(0,9);
+                            evento.fim = text.substring(0,10);
                         } else if (tagname.equalsIgnoreCase("startDate")) {
-                            evento.inicio = text.substring(0,9);
+                            evento.inicio = text.substring(0,10);
                         } else if (tagname.equalsIgnoreCase("identifier")) {
                             evento.setDescricao(text);
                         }

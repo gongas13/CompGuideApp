@@ -315,14 +315,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         protected Boolean doInBackground(Void... params) {
 
             Requests r = new Requests();
-            boolean res;
+            boolean res = false;
 
             try {
                 res = r.authetication(mEmail,mPassword);
+                System.out.println("###################### RES NO LOGIN "+res+" ##########################");
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            if (res=true) {
+            if (res==true) {
                 try {
                     xml = r.getXML();
                 } catch (IOException e) {
